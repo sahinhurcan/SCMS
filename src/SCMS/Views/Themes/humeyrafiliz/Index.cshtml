@@ -1,0 +1,540 @@
+@using Blog.Shared
+@{
+    Layout = "layouts/_main.cshtml";
+}
+
+<!--<main class="container">
+    <partial name="post/featured.cshtml" />-->
+@*
+    TODO:
+    Custom fields:
+    - Post list style options:
+        1. view-grid (default)
+        2. view-list
+*@
+<!--<partial name="post/view-grid.cshtml" />-->
+@* <partial name="post/view-list.cshtml" /> *@
+
+<!--<partial name="components/pagination.cshtml" />
+</main>-->
+
+<section>
+    <div class="w-100 position-relative">
+        <div class="feat-wrap3 position-relative overflow-hidden w-100">
+            <div class="feat-img-caro w-100">
+                <div class="d-block w-100"><div class="feat-img position-relative d-block w-100" style="background-image: url(assets/images/resources/feat-img2.jpg);"></div></div>
+                <div class="d-block w-100"><div class="feat-img position-relative d-block w-100" style="background-image: url(assets/images/resources/feat-img3.jpg);"></div></div>
+                <div class="d-block w-100"><div class="feat-img position-relative d-block w-100" style="background-image: url(assets/images/resources/feat-img4.jpg);"></div></div>
+            </div>
+            <div class="feat-cap3-wrap z1 position-absolute w-100">
+                <div class="feat-cap3 d-inline-block w-100">
+                    <span class="d-block position-relative thm-clr">Are You Looking for a Change?</span>
+                    <h2 class="mb-0">Create positive change and achieve extraordinary results.</h2>
+                    <p class="mb-0">Let the International Coach Federation help you begin your journey as a coach.</p>
+                    <div class="feat-serv-wrap text-center position-relative w-100">
+                        <div class="row mrg30">
+                            <div class="col-md-4 col-sm-4 col-lg-4">
+                                <div class="feat-serv-box w-100">
+                                    <i class="flaticon-schizophrenia thm-clr d-inline-block"></i>
+                                    <h3 class="mb-0"><a href="service-detail.html" title="">Troubling Emotions</a></h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-lg-4">
+                                <div class="feat-serv-box w-100">
+                                    <i class="flaticon-individual thm-clr d-inline-block"></i>
+                                    <h3 class="mb-0"><a href="service-detail.html" title="">Individual Counselling</a></h3>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-lg-4">
+                                <div class="feat-serv-box w-100">
+                                    <i class="flaticon-bipolar-1 thm-clr d-inline-block"></i>
+                                    <h3 class="mb-0"><a href="service-detail.html" title="">Child Counselling</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Featured Wrap 2 -->
+    </div>
+</section>
+<section>
+    <div class="w-100 pt-55 pb-55 position-relative">
+        <div class="container">
+            <ul class="spnsr-list d-flex flex-wrap justify-content-center align-items-center list-unstyled w-100">
+                <li>
+                    <div class="spnsr-box text-center w-100">
+                        <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/images/resources/spnsr-img1-1.png" alt="Sponsor Image 1"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="spnsr-box text-center w-100">
+                        <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/images/resources/spnsr-img1-2.png" alt="Sponsor Image 2"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="spnsr-box text-center w-100">
+                        <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/images/resources/spnsr-img1-3.png" alt="Sponsor Image 3"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="spnsr-box text-center w-100">
+                        <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/images/resources/spnsr-img1-4.png" alt="Sponsor Image 4"></a>
+                    </div>
+                </li>
+            </ul><!-- Sponsors List -->
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-100 position-relative">
+        <div class="special-wrap res-row overflow-hidden position-relative w-100">
+            <div class="row mrg">
+                <div class="col-md-6 col-sm-6 col-lg-4">
+                    <div class="special-box v3 text-center z1 scndry-bg grad-bg2 d-flex position-relative justify-content-center flex-wrap w-100">
+                        <i class="flaticon-brain d-inline-block"></i>
+                        <div class="special-box-inner">
+                            <h4 class="mb-0">Balance Body Mind</h4>
+                            <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor aliqua denim ads minim venia nostrud.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-4">
+                    <div class="special-box v3 text-center z1 scndry-bg grad-bg2 d-flex position-relative justify-content-center flex-wrap w-100">
+                        <i class="flaticon-running d-inline-block"></i>
+                        <div class="special-box-inner">
+                            <h4 class="mb-0">Nutrition Strategies</h4>
+                            <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor aliqua denim ads minim venia nostrud.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-lg-4">
+                    <div class="special-box v3 text-center z1 scndry-bg grad-bg2 d-flex position-relative justify-content-center flex-wrap w-100">
+                        <i class="flaticon-coach d-inline-block"></i>
+                        <div class="special-box-inner">
+                            <h4 class="mb-0">Individual Coaching</h4>
+                            <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor aliqua denim ads minim venia nostrud.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Specials Wrap -->
+    </div>
+</section>
+<section>
+    <div class="w-100 pt-100 gray-layer opc5 position-relative">
+        <div class="fixed-bg" style="background-image: url(assets/images/pattern-bg2.jpg);"></div>
+        <div class="container">
+            <div class="sec-title text-center w-100">
+                <div class="sec-title-inner d-inline-block">
+                    <span class="position-relative thm-clr d-block font-weight-extrabold">Best Therophy Makes</span>
+                    <h2 class="mb-0">What We Offer</h2>
+                    <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor incididub labore dolore magna aliqua denim ads minim veniam quis nostrud.</p>
+                </div>
+            </div><!-- Sec Title -->
+            <div class="serv-wrap4 position-relative w-100">
+                <div class="row mrg30">
+                    <div class="col-md-6 col-sm-6 col-lg-6">
+                        <div class="serv-box4 d-flex flex-wrap position-relative w-100">
+                            <i class="flaticon-schizophrenia scndry-clr d-inline-block"></i>
+                            <div class="serv-box4-inner">
+                                <h3 class="mb-0"><a href="service-detail.html" title="">Life Coaching</a></h3>
+                                <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor aliqua denim ads minim venia nostrud.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6">
+                        <div class="serv-box4 d-flex flex-wrap position-relative w-100">
+                            <i class="flaticon-puzzle scndry-clr d-inline-block"></i>
+                            <div class="serv-box4-inner">
+                                <h3 class="mb-0"><a href="service-detail.html" title="">Executive Coaching</a></h3>
+                                <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor aliqua denim ads minim venia nostrud.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6">
+                        <div class="serv-box4 d-flex flex-wrap position-relative w-100">
+                            <i class="flaticon-individual scndry-clr d-inline-block"></i>
+                            <div class="serv-box4-inner">
+                                <h3 class="mb-0"><a href="service-detail.html" title="">NLP Coaching</a></h3>
+                                <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor aliqua denim ads minim venia nostrud.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-6">
+                        <div class="serv-box4 d-flex flex-wrap position-relative w-100">
+                            <i class="flaticon-women scndry-clr d-inline-block"></i>
+                            <div class="serv-box4-inner">
+                                <h3 class="mb-0"><a href="service-detail.html" title="">Hypnosis for Change</a></h3>
+                                <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor aliqua denim ads minim venia nostrud.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Services Wrap 4 -->
+            <div class="enroll-wrap mt-100 pt-75 overlap-120 text-center scndry-bg pb-75 position-relative w-100">
+                <div class="enroll-inner d-inline-block">
+                    <h3 class="mb-0">AFFORDABLE</h3>
+                    <span class="d-block thm-clr">It's been our mission from the start:</span>
+                    <p class="mb-0">To provide the finest in professional training and certification at the most affordable tuition. Tuition for our complete Certified Professional Coach Courses begins at <br> only <span class="thm-clr">$1297</span> and we offer payment plans</p>
+                    <a class="thm-btn thm-bg brd-rd5 d-inline-block position-relative overflow-hidden" href="contact.html" title="">Enroll Now</a>
+                </div>
+            </div><!-- Enroll Wrap -->
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-100 pt-120 white-layer opc8 pb-120 position-relative">
+        <div class="container">
+            <div class="banners-wrap res-row position-relative w-100">
+                <div class="row mrg">
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="banner-box text-center position-relative overflow-hidden w-100">
+                            <img class="img-fluid w-100" src="assets/images/resources/banner-img1-1.jpg" alt="Banner Image 1">
+                            <div class="banner-info z1 position-absolute"><h3 class="mb-0"><a href="about.html" title="">Finding A Coach Should Be Easy</a></h3></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="banner-box text-center position-relative overflow-hidden w-100">
+                            <img class="img-fluid w-100" src="assets/images/resources/banner-img1-2.jpg" alt="Banner Image 2">
+                            <div class="banner-info z1 position-absolute"><h3 class="mb-0"><a href="about.html" title="">Schedule Your Free Discovery Call</a></h3></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="banner-box text-center position-relative overflow-hidden w-100">
+                            <img class="img-fluid w-100" src="assets/images/resources/banner-img1-3.jpg" alt="Banner Image 3">
+                            <div class="banner-info z1 position-absolute"><h3 class="mb-0"><a href="about.html" title="">Watch Introductory Video</a></h3></div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Banners Wrap -->
+            <div class="about-wrap3 mt-60 position-relative w-100">
+                <div class="row mrg30">
+                    <div class="col-md-12 col-sm-12 col-lg-6 order-lg-1">
+                        <div class="about-img position-relative w-100">
+                            <img class="img-fluid w-100" src="assets/images/resources/about-img.jpg" alt="About Image">
+                            <div class="social-links4 position-absolute">
+                                <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                            <div class="about-info z1 scndry-bg position-absolute">
+                                <i class="flaticon-coach position-absolute"></i>
+                                <h3 class="mb-0">Carrie Bowman, <span class="d-block thm-clr">MA, PCC, CLC</span></h3>
+                                <span class="d-block">- Certified Life Coach</span>
+                                <a class="thm-btn thm-bg d-inline-block position-relative overflow-hidden" href="contact.html" title="">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-lg-6">
+                        <div class="about-desc v2 w-100">
+                            <span class="thm-clr font-weight-extrabold d-inline-block border-0">We Can Change Your Life</span>
+                            <h2 class="mb-0">Coach, <span>Motivational Speaker</span> & Trainer</h2>
+                            <strong>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</strong>
+                            <p class="mb-0">Praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia.</p>
+                            <p class="mb-0">Nam libero tempore, cum soluta nobis est eligendi optio cumque maxime placeat facere possimus.</p>
+                            <span class="about-time d-block"><span class="scndry-clr">Every Week:</span> Monday To Friday: 9:00am to 5:00pm</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- About Wrap 3 -->
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-100 pt-120 blue-layer2 opc85 pb-130 position-relative">
+        <div class="fixed-bg" style="background-image: url(assets/images/parallax-bg11.jpg);"></div>
+        <div class="container">
+            <div class="sec-title2 v2 text-center w-100">
+                <div class="sec-title2-inner d-inline-block">
+                    <span class="thm-clr d-inline-block">STEPS TOWARDS MENTAL FITNESS</span>
+                    <h2 class="mb-0">Life Coaching Procedure</h2>
+                    <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor incididub labore dolore magna aliqua denim ads minim veniam quis nostrud.</p>
+                </div>
+            </div><!-- Sec Title 2 -->
+            <div class="procedure-wrap res-row text-center w-100">
+                <div class="row mrg30">
+                    <div class="col-md-4 col-sm-4 col-lg-3">
+                        <div class="proced-box z1 brd-rd5 thm-bg position-relative w-100">
+                            <span class="rounded-circle position-absolute">1</span>
+                            <h4 class="mb-0"><a href="service-detail.html" title="">Explore</a></h4>
+                            <p class="mb-0">Lorem ipsum dolor mod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-lg-3">
+                        <div class="proced-box z1 brd-rd5 thm-bg position-relative w-100">
+                            <span class="rounded-circle position-absolute">2</span>
+                            <h4 class="mb-0"><a href="service-detail.html" title="">Mentorship</a></h4>
+                            <p class="mb-0">Lorem ipsum dolor mod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-lg-3">
+                        <div class="proced-box z1 brd-rd5 thm-bg position-relative w-100">
+                            <span class="rounded-circle position-absolute">3</span>
+                            <h4 class="mb-0"><a href="service-detail.html" title="">Motivate</a></h4>
+                            <p class="mb-0">Lorem ipsum dolor mod tempor.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-lg-3">
+                        <div class="proced-box z1 brd-rd5 thm-bg position-relative w-100">
+                            <span class="rounded-circle position-absolute">4</span>
+                            <h4 class="mb-0"><a href="service-detail.html" title="">Support</a></h4>
+                            <p class="mb-0">Lorem ipsum dolor mod tempor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Procedure Wrap -->
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-100 pt-100 white-layer opc95 pb-110 position-relative">
+        <div class="fixed-bg" style="background-image: url(assets/images/parallax-bg2.jpg);"></div>
+        <div class="container">
+            <div class="sec-title2 v3 text-center w-100">
+                <div class="sec-title2-inner d-inline-block">
+                    <span class="thm-clr d-inline-block letter-spacing-initial text-transform-initial border-0">Best Therophy Makes</span>
+                    <h2 class="mb-0">Life Coaching Courses</h2>
+                    <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor incididub labore dolore magna aliqua denim ads minim veniam quis nostrud.</p>
+                </div>
+            </div><!-- Sec Title 2 -->
+            <div class="courses-wrap res-row position-relative w-100">
+                <div class="row mrg30">
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="course-box position-relative w-100">
+                            <span class="price z2 brd-rd5 text-center scndry-bg position-absolute"><small>$</small>25</span>
+                            <div class="course-img overflow-hidden position-relative w-100">
+                                <a href="course-detail.html" title=""><img class="img-fluid w-100" src="assets/images/resources/course-img1-1.jpg" alt="Course Image 1"></a>
+                            </div>
+                            <div class="course-info bg-color6 position-relative w-100">
+                                <a class="course-author-img z1 rounded-circle position-relative" href="archive.html" title=""><img class="img-fluid rounded-circle" src="assets/images/resources/authr-img1-1.jpg" alt="Author Image 1"></a>
+                                <span class="d-block">By <a href="archive.html" title="">Alex Brook</a></span>
+                                <h3 class="mb-0"><a href="course-detail.html" title="">Introduction to network coaching course</a></h3>
+                                <div class="rating d-block">
+                                    <span class="rate thm-clr d-inline-block"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></span>
+                                    <i class="d-inline-block font-style-normal">4.7 (9 Rating)</i>
+                                </div>
+                                <div class="course-info-bottom scndry-clr bg-color13 d-inline-flex flex-wrap w-100">
+                                    <span>8 Lessons</span>
+                                    <span>61 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="course-box position-relative w-100">
+                            <span class="price z2 brd-rd5 text-center scndry-bg position-absolute"><small>$</small>25</span>
+                            <div class="course-img overflow-hidden position-relative w-100">
+                                <a href="course-detail.html" title=""><img class="img-fluid w-100" src="assets/images/resources/course-img1-2.jpg" alt="Course Image 2"></a>
+                            </div>
+                            <div class="course-info bg-color6 position-relative w-100">
+                                <a class="course-author-img z1 rounded-circle position-relative" href="archive.html" title=""><img class="img-fluid rounded-circle" src="assets/images/resources/authr-img1-1.jpg" alt="Author Image 1"></a>
+                                <span class="d-block">By <a href="archive.html" title="">Alex Brook</a></span>
+                                <h3 class="mb-0"><a href="course-detail.html" title="">5 Fun Activities To Improve your Mental Health.</a></h3>
+                                <div class="rating d-block">
+                                    <span class="rate thm-clr d-inline-block"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    <i class="d-inline-block font-style-normal">5.0 (1 Rating)</i>
+                                </div>
+                                <div class="course-info-bottom scndry-clr bg-color13 d-inline-flex flex-wrap w-100">
+                                    <span>8 Lessons</span>
+                                    <span>61 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="course-box position-relative w-100">
+                            <span class="price z2 brd-rd5 text-center scndry-bg position-absolute"><small>$</small>25</span>
+                            <div class="course-img overflow-hidden position-relative w-100">
+                                <a href="course-detail.html" title=""><img class="img-fluid w-100" src="assets/images/resources/course-img1-3.jpg" alt="Course Image 3"></a>
+                            </div>
+                            <div class="course-info bg-color6 position-relative w-100">
+                                <a class="course-author-img z1 rounded-circle position-relative" href="archive.html" title=""><img class="img-fluid rounded-circle" src="assets/images/resources/authr-img1-1.jpg" alt="Author Image 1"></a>
+                                <span class="d-block">By <a href="archive.html" title="">Alex Brook</a></span>
+                                <h3 class="mb-0"><a href="course-detail.html" title="">Fitness Coach: Gym Workout & Body Building</a></h3>
+                                <div class="rating d-block">
+                                    <span class="rate thm-clr d-inline-block"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    <i class="d-inline-block font-style-normal">5.0 (5 Rating)</i>
+                                </div>
+                                <div class="course-info-bottom scndry-clr bg-color13 d-inline-flex flex-wrap w-100">
+                                    <span>8 Lessons</span>
+                                    <span>61 Students</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Courses Wrap -->
+            <div class="view-more mt-70 d-inline-block text-center w-100">
+                <p class="mb-0">Want to see life coaching courses? Explore <a class="simple-link thm-clr d-inline-block" href="courses.html" title="">More Courses</a> section.</p>
+            </div><!-- View More -->
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-100 scndry-bg position-relative">
+        <div class="video-impact-wrap position-relative w-100">
+            <div class="row mrg">
+                <div class="col-md-12 col-sm-12 col-lg-6">
+                    <div class="video-box-wrap z1 d-flex flex-wrap justify-content-center align-items-center position-relative w-100" style="background-image: url(assets/images/video-bg.jpg);">
+                        <div class="video-box position-relative d-inline-block">
+                            <a class="position-absolute spinner" href="https://player.vimeo.com/video/25969077" data-fancybox title=""><i class="flaticon-play-button"></i></a>
+                            <span class="d-block thm-clr">Work Shedule</span>
+                            <h2 class="mb-0">Should I <br> Become A Coach?</h2>
+                            <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor incid idub labore dolore magna aliqua denim ads minim veniam quis nostrud.</p>
+                            <a class="thm-btn thm-bg brd-rd5 d-inline-block position-relative overflow-hidden" href="javascript:void(0);" title="">Become A Coach</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-6">
+                    <div class="impact-wrap z1 d-flex flex-wrap justify-content-center align-items-center position-relative w-100" style="background-image: url(assets/images/bubble-bg.png);">
+                        <div class="impact-inner d-inline-block">
+                            <span class="d-block thm-clr">Work Shedule</span>
+                            <h2 class="mb-0">Our Impact In Numbers</h2>
+                            <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor incid idub labore dolore magna aliqua denim ads minim veniam quis nostrud.</p>
+                            <div class="impact-facts-wrap w-100">
+                                <div class="row mrg30">
+                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                        <div class="impact-fact-box d-flex flex-wrap w-100">
+                                            <i class="flaticon-medical d-inline-block"></i>
+                                            <div class="impact-fact-box-inner">
+                                                <span class="thm-clr d-block"><span class="counter">148.2</span>K</span>
+                                                <p class="mb-0">Finished Sessions</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                        <div class="impact-fact-box d-flex flex-wrap w-100">
+                                            <i class="flaticon-glove d-inline-block"></i>
+                                            <div class="impact-fact-box-inner">
+                                                <span class="thm-clr d-block"><span class="counter">3085</span>+</span>
+                                                <p class="mb-0">Online Enrollment</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                        <div class="impact-fact-box d-flex flex-wrap w-100">
+                                            <i class="flaticon-neurology-1 d-inline-block"></i>
+                                            <div class="impact-fact-box-inner">
+                                                <span class="thm-clr d-block"><span class="counter">256</span></span>
+                                                <p class="mb-0">Subjects Taught</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                        <div class="impact-fact-box d-flex flex-wrap w-100">
+                                            <i class="flaticon-oxygen d-inline-block"></i>
+                                            <div class="impact-fact-box-inner">
+                                                <span class="thm-clr d-block"><span class="counter">100</span>%</span>
+                                                <p class="mb-0">Satisfaction rate</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Video & Impact Wrap -->
+    </div>
+</section>
+<section>
+    <div class="w-100 pt-110 gray-layer opc5 pb-110 position-relative">
+        <div class="fixed-bg" style="background-image: url(assets/images/pattern-bg2.jpg);"></div>
+        <div class="container">
+            <div class="sec-title2 v3 text-center w-100">
+                <div class="sec-title2-inner d-inline-block">
+                    <span class="thm-clr d-inline-block letter-spacing-initial text-transform-initial border-0">Best Therophy Makes</span>
+                    <h2 class="mb-0">Client Reviews</h2>
+                    <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor incididub labore dolore magna aliqua denim ads minim veniam quis nostrud.</p>
+                </div>
+            </div><!-- Sec Title 2 -->
+            <div class="client-reviews-wrap res-row text-center w-100">
+                <div class="row mrg30">
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="client-review-box brd-rd5 position-relative w-100">
+                            <div class="client-img z1 position-absolute rounded-circle"><img class="img-fluid rounded-circle" src="assets/images/resources/client-img1-1.jpg" alt="Client Image 1"><span class="position-absolute z1 rounded-circle"><i class="flaticon-left-quotes-sign thm-clr"></i></span></div>
+                            <h3 class="mb-0">Susan Croft</h3>
+                            <p class="mb-0">Ut enim adminim veniam, quis nostru tation ullamco lorem ipsum. Except occaecat cupidatat non proide mollit est laborum.</p>
+                            <span class="d-block scndry-clr">Philadelphia, Pa</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="client-review-box brd-rd5 position-relative w-100">
+                            <div class="client-img z1 position-absolute rounded-circle"><img class="img-fluid rounded-circle" src="assets/images/resources/client-img1-2.jpg" alt="Client Image 2"><span class="position-absolute z1 rounded-circle"><i class="flaticon-left-quotes-sign thm-clr"></i></span></div>
+                            <h3 class="mb-0">Jake Miller</h3>
+                            <p class="mb-0">Ut enim adminim veniam, quis nostru tation ullamco lorem ipsum. Except occaecat cupidatat non proide mollit est laborum.</p>
+                            <span class="d-block scndry-clr">South Africa</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="client-review-box z1 brd-rd5 position-relative w-100">
+                            <div class="client-img position-absolute rounded-circle"><img class="img-fluid rounded-circle" src="assets/images/resources/client-img1-3.jpg" alt="Client Image 3"><span class="position-absolute z1 rounded-circle"><i class="flaticon-left-quotes-sign thm-clr"></i></span></div>
+                            <h3 class="mb-0">Maria Rose</h3>
+                            <p class="mb-0">Ut enim adminim veniam, quis nostru tation ullamco lorem ipsum. Except occaecat cupidatat non proide mollit est laborum.</p>
+                            <span class="d-block scndry-clr">New York</span>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Client Reviews Wrap -->
+        </div>
+    </div>
+</section>
+<section>
+    <div class="w-100 pt-100 white-layer opc97 pb-100 position-relative">
+        <div class="fixed-bg" style="background-image: url(assets/images/parallax-bg4.jpg);"></div>
+        <div class="container">
+            <div class="news-side-title-wrap w-100">
+                <div class="row mrg30">
+                    <div class="col-md-12 col-sm-12 col-lg-4">
+                        <div class="side-title w-100">
+                            <div class="side-title-inner d-inline-block">
+                                <span class="d-block thm-clr">Best Therophy Makes</span>
+                                <h2 class="mb-0">Trending on Our Blogs</h2>
+                                <p class="mb-0">Adipisicing elit sed dole there eiusmod tempor incididub labore dolore magna aliqua denim ads minim.</p>
+                                <a class="thm-btn thm-bg brd-rd5 d-inline-block position-relative overflow-hidden" href="blog3.html" title="">More Updates</a>
+                            </div>
+                        </div><!-- Side Title -->
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-lg-8">
+                        <div class="news-wrap3 position-relative w-100">
+                            <div class="row mrg30">
+                                <div class="col-md-6 col-sm-6 col-lg-6">
+                                    <div class="news-box3 position-relative w-100">
+                                        <div class="news-img3 brd-rd5 position-relative overflow-hidden w-100">
+                                            <img class="img-fluid w-100" src="assets/images/resources/news-img3-2.jpg" alt="News Image 2">
+                                            <a class="position-absolute" href="blog-detail.html" title=""><i class="flaticon-plus"></i></a>
+                                        </div>
+                                        <div class="news-info3 w-100">
+                                            <h3 class="mb-0"><a href="blog-detail.html" title="">Pocket-Sized Notebooks Hold Miniature Paintings</a></h3>
+                                            <ul class="meta2 mb-0 list-unstyled d-flex flex-wrap align-items-center w-100">
+                                                <li class="thm-clr"><a href="archive.html" title=""><span>25</span> January 2021</a></li>
+                                                <li><span class="scndry-bg brd-rd5 position-relative">11</span><a href="archive.html" title="">Comments</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-lg-6">
+                                    <div class="news-box3 position-relative w-100">
+                                        <div class="news-img3 brd-rd5 position-relative overflow-hidden w-100">
+                                            <img class="img-fluid w-100" src="assets/images/resources/news-img3-3.jpg" alt="News Image 3">
+                                            <a class="position-absolute" href="blog-detail.html" title=""><i class="flaticon-plus"></i></a>
+                                        </div>
+                                        <div class="news-info3 w-100">
+                                            <h3 class="mb-0"><a href="blog-detail.html" title="">Connection Between Self Portraits and Identity</a></h3>
+                                            <ul class="meta2 mb-0 list-unstyled d-flex flex-wrap align-items-center w-100">
+                                                <li class="thm-clr"><a href="archive.html" title=""><span>30</span> March 2021</a></li>
+                                                <li><span class="scndry-bg brd-rd5 position-relative">25</span><a href="archive.html" title="">Comments</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- News Wrap 3 -->
+                    </div>
+                </div>
+            </div><!-- News with Side Title Wrap -->
+        </div>
+    </div>
+</section>

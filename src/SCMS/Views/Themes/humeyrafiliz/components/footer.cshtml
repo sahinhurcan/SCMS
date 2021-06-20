@@ -1,0 +1,83 @@
+@using Blog.Shared.Resources
+@using Blog.Shared
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Resource> _localizer
+@{
+    var siteTitle = Model.Blog.Title;
+    var version = "3.0";
+}
+
+<div class="modal fade search-modal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog mt-5">
+        <div class="modal-content">
+            <form id="searchForm" class="search-form" asp-controller="Home" asp-action="Search" method="post">
+                <input type="search" id="searchFormInput" name="term" class="form-control form-control-lg border-0 shadow-none" placeholder="@_localizer["search"]..." autocomplete="off" autofocus>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="w-100 style1 pt-80 bg-color7 pb-90 position-relative">
+        <div class="container">
+            <div class="footer-data w-100">
+                <div class="row justify-content-between mrg30">
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="widget-box w-100">
+                            <h4 class="widget-title position-relative">İletişim</h4>
+                            <ul class="contact-info-list mb-0 list-unstyled w-100">
+                                <li><span>Telefon:</span>0531 848 01 45</li>
+                                <li><span>E-Posta:</span><a href="mailto:info@humeyrafiliz.com" title="">info@humeyrafiliz.com</a></li>
+                                <li>İstanbul,Büyükçekmece</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="widget-box newsletter-widget w-100">
+                            <h3 class="mb-0 position-relative">
+                                <i class="flaticon-email scndry-clr position-absolute"></i>Bülten'e Katıl Yazılardan Haberdar Ol.
+                            </h3>
+                            <form class="newsletter-form brd-rd5 overflow-hidden position-relative w-100">
+                                <input type="email" placeholder="E-Posta adersinizi girin.">
+                                <button type="submit"><i class="flaticon-long-arrow-pointing-to-the-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="widget-box w-100">
+                            <h4 class="widget-title position-relative">Sayfalar</h4>
+                            <ul class="mb-0 list-unstyled w-100">
+                                <li><a href="/" title="">Ana Sayfa</a></li>
+                                <li><a href="/blog" title="">Blog</a></li>
+                                <li><a href="/posts/hakkimizda" title="">Hakkımızda</a></li>
+                                <li><a href="/posts/iletisim" title="">İletişim</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-lg-4">
+                        <div class="widget-box w-100">
+                            <div class="social-links3 d-flex flex-wrap align-items-center w-100">
+                                <h3 class="mb-0">Takip Et</h3>
+                                <a class="brd-rd5 twitter-hvr" href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a class="brd-rd5 facebook-hvr" href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a class="brd-rd5 youtube-hvr" href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                                <a class="brd-rd5 linkedin-hvr" href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-lg-6">
+                        <div class="widget-box w-100">
+                            <ul class="ftr-gal-list d-flex flex-wrap mb-0 list-unstyled">
+                                <li><a href="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-1.jpg" data-fancybox="gallery" title=""><img class="img-fluid w-100" src="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-1.jpg" alt="Footer Gallery Image 1"></a></li>
+                                <li><a href="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-2.jpg" data-fancybox="gallery" title=""><img class="img-fluid w-100" src="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-2.jpg" alt="Footer Gallery Image 2"></a></li>
+                                <li><a href="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-3.jpg" data-fancybox="gallery" title=""><img class="img-fluid w-100" src="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-3.jpg" alt="Footer Gallery Image 3"></a></li>
+                                <li><a href="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-4.jpg" data-fancybox="gallery" title=""><img class="img-fluid w-100" src="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-4.jpg" alt="Footer Gallery Image 4"></a></li>
+                                <li><a href="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-5.jpg" data-fancybox="gallery" title=""><img class="img-fluid w-100" src="~/themes/humeyrafiliz/images/resources/ftr-gal-img1-5.jpg" alt="Footer Gallery Image 5"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- Footer Data -->
+        </div>
+    </div>
+</footer><!-- Footer -->

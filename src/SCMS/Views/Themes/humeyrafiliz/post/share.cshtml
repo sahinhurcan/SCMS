@@ -1,0 +1,21 @@
+@using Blog.Shared
+@{
+    var request = Url.ActionContext.HttpContext.Request;
+    var absoluteUrl = $"{request.Scheme}://{request.Host.ToUriComponent()}{request.PathBase.ToUriComponent()}";
+
+    PostModel postModel = (PostModel)Model;
+    var post = postModel.Post;
+
+    var postTitle = post.Title;
+    var postSlug = absoluteUrl + "/posts/" + post.Slug;
+
+    var share_facebook = "https://www.facebook.com/sharer/sharer.php?u=" + postSlug;
+    var share_twitter = "https://twitter.com/intent/tweet?text=" + postTitle + "&url=" + postSlug;
+    var share_email = "mailto:?&subject=" + postTitle + "&cc=&bcc=&body=" + postTitle + "%0" + postSlug;
+}
+
+<div class="social-links5 d-inline-flex flex-wrap position-absolute">
+        <a><i class="rounded-circle fas fa-share-alt"></i></a>
+        <a class="rounded-circle twitter-hvr" href="@share_twitter" title="Twtiter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="rounded-circle facebook-hvr" href="@share_facebook" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>

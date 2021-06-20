@@ -1,0 +1,19 @@
+@using Blog.Shared.Resources
+@using Blog.Shared
+@{
+    var request = Url.ActionContext.HttpContext.Request;
+    var absoluteUrl = $"{request.Scheme}://{request.Host.ToUriComponent()}{request.PathBase.ToUriComponent()}";
+    var newsletterAction = @absoluteUrl + "/api/newsletter/subscribe";
+}
+
+<div class="widget-box v3 thm-bg brd-rd10 nesletter_widget overflow-hidden w-100">
+    <div class="nesletter-form text-center w-100">
+        <h4 class="mb-0">Bülten'e Katıl Yazılardan Haberdar Ol.</h4>
+        <form id="newsletter" method="post" action="@newsletterAction" class="w-100">
+            <input class="brd-rd5 w-100" type="email" placeholder="E-Posta giriniz">
+            <button class="thm-btn scndry-bg brd-rd5 d-inline-block position-relative overflow-hidden w-100" type="submit"><i class="flaticon-email"></i>Abone Ol</button>
+        </form>
+    </div>
+    <div id="newsletter_status" onclick="resetNewsletter()" role="status" data-success="Teşekkürler, Abone oldunuz!" data-error="Tüh,Bir şeyler ters gitti!"></div>
+</div>
+

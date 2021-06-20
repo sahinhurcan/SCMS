@@ -1,0 +1,65 @@
+@using Blog.Shared
+@using Blog.Shared.Resources
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Resource> _localizer
+@{
+    var request = Url.ActionContext.HttpContext.Request;
+    var absoluteUrl = $"{request.Scheme}://{request.Host.ToUriComponent()}{request.PathBase.ToUriComponent()}";
+
+    var siteTitle = Model.Blog.Title;
+    var siteDesc = Model.Blog.Description;
+
+    @* TODO: Customfield *@
+    var siteMark = "titleDesc";
+    var siteLogo = "/themes/standard/img/logo-black.png";
+}
+
+<header class="style3 w-100">
+    <div class="top-noti scndry-bg text-center w-100">
+        <div class="container">
+            <p class="mb-0">COVID-19 Resources for Neurology Coaches... <a class="simple-link d-inline-block" href="javascript:void(0);" title="">Learn More</a></p>
+        </div>
+    </div>
+    <div class="topbar bg-color11 w-100">
+        <div class="container">
+            <div class="topbar-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+                <div class="header-contact position-relative"><i class="flaticon-telephone position-absolute"></i>+1 (202) 588-6500</div>
+                <div class="topbar-right d-inline-flex align-items-center flex-wrap">
+                    <ul class="top-links mb-0 list-unstyled d-inline-flex align-items-center flex-wrap">
+                        <li><a href="blog3.html" title="">News</a></li>
+                        <li><a href="about.html" title="">Carrers</a></li>
+                        <li><a href="services.html" title="">Services</a></li>
+                    </ul>
+                    <div class="social-links d-inline-flex">
+                        <a href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/" title="Linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <a class="search-btn d-inline-block position-relative" href="javascript:void(0);" title=""><i class="flaticon-magnifying-glass"></i></a>
+                </div>
+            </div>
+        </div>
+    </div><!-- Topbar -->
+    <div class="logo-menu-wrap position-relative w-100">
+        <div class="container">
+            <div class="logo-menu-inner d-flex flex-wrap align-items-center justify-content-between position-relative w-100">
+                <div class="logo v2 z1 bg-color10 position-absolute text-center"><h1 class="mb-0"><a class="d-block" href="/" title="Home"><img class="img-fluid" src="~/themes/humeyrafiliz/images/logo4.png" alt="Logo" srcset="~/themes/humeyrafiliz/images/retina-logo4.png"></a></h1></div><!-- Logo -->
+                <nav class="d-flex flex-wrap align-items-center justify-content-between w-100">
+                    <div class="header-left">
+                        <ul class="mb-0 list-unstyled d-inline-flex">
+                            <li><a href="/" title="Ana Sayfa">Ana Sayfa</a></li>
+                            <li><a href="/blog" title="Blog">Blog</a></li>
+                            <li><a href="/posts/hakkimizda" title="">Hakkımızda</a></li>
+                            <li><a href="/posts/Iletisim" title="">İletişim</a></li>
+                        </ul>
+                    </div>
+                    <div class="header-right d-inline-flex flex-wrap align-items-center">
+                        <a class="thm-btn v2 scndry-bg brd-rd5 d-inline-block position-relative overflow-hidden" href="appointment.html" title="">Join Free Coaching</a>
+                    </div>
+                </nav><!-- Navigation -->
+            </div>
+        </div>
+    </div><!-- Logo & Menu Wrap -->
+</header><!-- Header -->
+<partial name="../components/nav.cshtml" />

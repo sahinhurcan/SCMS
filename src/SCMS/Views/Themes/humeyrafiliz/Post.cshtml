@@ -1,0 +1,110 @@
+@using Blog.Shared.Resources
+@using Blog.Shared
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<Resource> _localizer
+@inject ICategoryProvider _categoryProvider
+@{
+    Layout = "layouts/_main.cshtml";
+    PostModel postModel = (PostModel)Model;
+    var post = postModel.Post;
+    string cover = postModel.Post.Cover;
+    var catUrl = Url.Content("~/categories");
+    var categories = await _categoryProvider.Categories();
+
+}
+
+<section>
+    <div class="w-100 pt-100 black-layer opc5 pb-80 position-relative">
+        <div class="fixed-bg" style="background-image: url(@cover);"></div>
+        <div class="container">
+            <div class="page-title-wrap text-center w-100">
+                <div class="page-title-inner d-inline-block">
+                    <h1 class="mb-0">@post.Title</h1>
+                    <ol class="breadcrumb mb-0 justify-content-center">
+                        <li class="breadcrumb-item"><a href="/" title="">Ana Sayfa</a></li>
+                        <li class="breadcrumb-item"><a href="/Blog" title="">Blog</a></li>
+                        <li class="breadcrumb-item active">@post.Title</li>
+                    </ol>
+                </div>
+            </div><!-- Page Title Wrap -->
+        </div>
+    </div>
+</section>
+<!--Blog Post-->
+<section>
+    <div class="w-100 pt-110 pb-110 position-relative">
+        <div class="container">
+            <div class="page-wrap position-relative w-100">
+                <div class="row mrg30">
+                    <div class="col-md-12 col-sm-12 col-lg-8">
+                        <div class="post-detail blog-detail w-100">
+                            <partial name="post/share.cshtml" />
+                            <div class="post-feat-img brd-rd10 position-relative overflow-hidden w-100">
+                                <img class="img-fluid w-100" src="@cover" alt="@post.Title">
+                            </div>
+                            <ul class="meta3 list-unstyled d-flex flex-wrap align-items-center w-100">
+                                <li><span class="post-detail-date rounded-pill scndry-bg">@post.Published.ToFriendlyShortDateString()</span></li>
+                                <li><i class="fas fa-tag thm-clr"></i><a href="javascript:void(0);" title="">Chrity</a>, <a href="javascript:void(0);" title="">poor</a>, <a href="javascript:void(0);" title="">people</a>, <a href="javascript:void(0);" title="">ideas</a></li>
+                                <li><i class="fas fa-user thm-clr"></i>@post.Author.DisplayName</li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li>
+                                        <a class="post-meta-btn ms-2" href="~/admin/editor/@post.Slug" role="button" aria-label="@_localizer["edit-post"]">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                                <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                            </svg>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+
+                            @Html.Raw(post.Content)
+
+                            <partial name="post/author.cshtml" />
+
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-8 col-lg-4">
+                        <aside class="sidebar w-100">
+                            <!--Öne Çıkan-->
+
+                            <div class="widget-box v3 brd-rd10 bg-color6 overflow-hidden w-100">
+                                <h4 class="position-relative tit-shp thm-shp widget-title3">Öne Çıkanlar</h4>
+                                <div class="mini-posts-wrap w-100">
+                                    @foreach (var featured in Model.Featured)
+                                    {
+                                        <div class="mini-post-box d-flex flex-wrap align-items-center">
+                                            <a class="brd-rd5 overflow-hidden" href="~/posts/@featured.Slug" title=""><img class="img-fluid" src="@featured.Cover" alt="@featured.Title"></a>
+                                            <div class="mini-post-info">
+                                                <h5 class="mb-0"><a href="~/posts/@featured.Slug" title="">@featured.Title</a></h5>
+                                                <span class="scndry-clr d-block">@featured.Published.ToString("MMM dd"), @featured.Published.Year</span>
+                                            </div>
+                                        </div>}
+
+                                </div>
+                            </div>
+                            <!--Öne Çıkan-->
+                            <!--Kategori-->
+                            <div class="widget-box v3 brd-rd10 bg-color6 categories_widget overflow-hidden w-100">
+                                <h4 class="position-relative tit-shp thm-shp widget-title3">Kategoriler</h4>
+                                <ul class="mb-0 list-unstyled w-100">
+                                    @foreach (var cat in categories)
+                                    {
+                                        <li><a href = "~/categories/@cat.Category" title = "" > @cat.Category </a>[@cat.PostCount] </li>
+                                    }
+                                </ul>
+                            </div>
+                            <!--Kategori-->
+                            <!--Abonelik-->
+                            <partial name="components/newsletter.cshtml" />
+
+                            <!--Abonelik-->
+                        </aside><!-- Sidebar -->
+                    </div>
+                </div>
+            </div><!-- Page Wrap -->
+        </div>
+    </div>
+</section>
+<!--Blog Post-->
+<partial name="components/sub-form.cshtml" />

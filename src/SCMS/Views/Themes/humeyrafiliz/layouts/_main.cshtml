@@ -1,0 +1,93 @@
+@{
+    var request = Url.ActionContext.HttpContext.Request;
+    var absoluteUrl = $"{request.Scheme}://{request.Host.ToUriComponent()}{request.PathBase.ToUriComponent()}";
+
+    var siteTitle = Model.Blog.Title;
+    var siteDesc = Model.Blog.Description;
+    var siteFeed = absoluteUrl + "/feed/rss";
+
+    var pageTitle = siteTitle + " | " + siteDesc;
+    var pageDesc = siteDesc;
+    var pageCanonical = absoluteUrl;
+
+    if (Model.ToString().EndsWith("PostModel"))
+    {
+        PostModel postModel = (PostModel)Model;
+        pageTitle = postModel.Post.Title + " | " +  siteTitle;
+        pageDesc = postModel.Post.Description.StripHtml();
+        pageCanonical = absoluteUrl + "/posts/" + postModel.Post.Slug;
+    }
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>@pageTitle</title>
+    <meta name="description" content="@pageDesc">
+    <link rel="alternate" type="application/rss+xml" title="@siteTitle" href="@siteFeed" />
+    <link rel="canonical" href="@pageCanonical" />
+
+    <!-- Temel değişken ataması -->
+    <style>
+        :root {
+            /* accent color */
+            --bf-color: #622aff;
+            /* header */
+            --bf-header-title-size: 1.5rem;
+            --bf-header-title-weight: 700;
+            --bf-header-title-color: #000;
+            --bf-header-title-hover: #622aff;
+            /* logo */
+            --bf-header-logo-width: auto;
+            --bf-header-logo-height: 1.5rem;
+            /* post */
+            --bf-post-width: 43.75rem;
+            /* radius */
+            --bf-radius: .5rem;
+        }
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    @*<link rel="stylesheet" href="~/themes/humeyrafiliz/css/styles.css" asp-append-version="true">*@
+    @*SASS için yapıldı*@
+
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/all.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/flaticon.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/animate.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/bootstrap.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/jquery.fancybox.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/perfect-scrollbar.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/slick.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/style.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/responsive.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/themes/humeyrafiliz/css/color3.css" asp-append-version="true">
+
+    @Html.Raw(Model.Blog.HeaderScript)
+</head>
+
+
+<body>
+    <partial name="../components/header.cshtml" />
+    @RenderBody()
+    <partial name="../components/footer.cshtml" />
+
+    <script src="~/themes/humeyrafiliz/js/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/popper.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/bootstrap.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/wow.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/counterup.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/jquery.fancybox.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/perfect-scrollbar.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/isotope.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/slick.min.js" asp-append-version="true"></script>
+    <script src="~/themes/humeyrafiliz/js/custom-scripts.js" asp-append-version="true"></script>
+
+    @Html.Raw(Model.Blog.FooterScript)
+    <partial name="../components/metadata.cshtml" />
+</body>
+
+</html>

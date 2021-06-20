@@ -1,0 +1,17 @@
+@using Blog.Shared
+@{
+    PostModel postModel = (PostModel)Model;
+    var author = postModel.Post.Author;
+}
+<div class="author-box z1 position-relative w-100 d-flex flex-wrap">
+    <span class="brd-rd10"><img class="img-fluid w-100" src="@author.Avatar" alt="@author.DisplayName"></span>
+    <div class="author-info">
+        <h4 class="mb-0">@author.DisplayName Hakkında</h4>
+        <p class="mb-0">@author.Bio</p>
+        <div class="social-links6 z1 d-inline-flex flex-wrap align-items-center position-absolute">
+            <a class="twitter" href="https://twitter.com/" title="Twtiiter" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="facebook" href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="youtube" href="https://www.youtube.com/" title="Youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</div>
