@@ -9,5 +9,7 @@ namespace SCMS.Shared
       public PostItem Older { get; set; }
       public PostItem Newer { get; set; }
       public IEnumerable<PostItem> Related { get; set; }
+      public IEnumerable<PostItem> Featured { get; set; }
+
    }
 }

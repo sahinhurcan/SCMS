@@ -130,6 +130,10 @@ namespace SCMS.Controllers
 				model.Post.Description = model.Post.Description.MdToHtml();
 				model.Post.Content = model.Post.Content.MdToHtml();
 
+                var pager = new Pager(1, 10);
+                var featured = await _postProvider.Search(pager, "", 0, "FP").ConfigureAwait(false);
+                model.Featured = featured.Where(p => p.Featured).Take(3).ToList();
+				
                 if(!model.Post.Author.Avatar.StartsWith("data:"))
                     model.Post.Author.Avatar = Url.Content($"~/{model.Post.Author.Avatar}");
 
@@ -221,6 +225,48 @@ namespace SCMS.Controllers
 			}
 		}
 
+		[HttpGet("blog")]
+        public async Task<IActionResult> Blog(string term, int page = 1)
+        {
+            var model = new ListModel { PostListType = PostListType.Blog };
+            try
+            {
+                model.Blog = await _blogProvider.GetBlogItem();
+            }
+            catch
+            {
+                return Redirect("~/admin");
+            }
+
+            model.Pager = new Pager(page, model.Blog.ItemsPerPage);
+
+            if (string.IsNullOrEmpty(term))
+            {
+                if (model.Blog.IncludeFeatured)
+                    model.Posts = await _postProvider.GetList(model.Pager, 0, "", "FP");
+                else
+                    model.Posts = await _postProvider.GetList(model.Pager, 0, "", "P");
+            }
+            else
+            {
+                model.PostListType = PostListType.Search;
+                model.Blog.Title = term;
+                model.Blog.Description = "";
+                model.Posts = await _postProvider.Search(model.Pager, term, 0, "FP");
+            }
+
+            if (model.Pager.ShowOlder) model.Pager.LinkToOlder = $"?page={model.Pager.Older}";
+            if (model.Pager.ShowNewer) model.Pager.LinkToNewer = $"?page={model.Pager.Newer}";
+
+            if (!string.IsNullOrEmpty(term))
+            {
+                string viewPath = $"~/Views/Themes/{model.Blog.Theme}/Search.cshtml";
+                if (IsViewExists(viewPath))
+                    return View(viewPath, model);
+            }
+
+            return View($"~/Views/Themes/{model.Blog.Theme}/Blog.cshtml", model);
+        }
         private bool IsViewExists(string viewPath)
         {
             var result = _compositeViewEngine.GetView("", viewPath, false);
