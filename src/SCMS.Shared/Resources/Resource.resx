@@ -468,6 +468,9 @@
   <data name="pages" xml:space="preserve">
     <value>Sayfalar</value>
   </data>
+  <data name="services" xml:space="preserve">
+    <value>Hizmetler</value>
+  </data>
   <data name="advanced" xml:space="preserve">
     <value>Gelişmiş</value>
   </data>
@@ -485,6 +488,9 @@
   </data>
   <data name="page-title" xml:space="preserve">
     <value>Sayfa başlığı</value>
+  </data>
+  <data name="service-title" xml:space="preserve">
+    <value>Hizmet başlığı</value>
   </data>
     <data name="about-scms" xml:space="preserve">
     <value>Sistem Hakkında</value>
@@ -524,6 +530,9 @@
   </data>
   <data name="new-page" xml:space="preserve">
     <value>Yeni sayfa</value>
+  </data>
+  <data name="new-service" xml:space="preserve">
+    <value>Yeni hizmet</value>
   </data>
   <data name="operating-system" xml:space="preserve">
     <value>İşletim Sitemi</value>

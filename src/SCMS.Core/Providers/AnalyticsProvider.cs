@@ -30,6 +30,7 @@ namespace SCMS.Core.Providers
 			{
 				TotalPosts = _db.Posts.Where(p => p.PostType == PostType.Post).Count(),
                 TotalPages = _db.Posts.Where(p => p.PostType == PostType.Page).Count(),
+                TotalServices = _db.Posts.Where(p => p.PostType == PostType.Service).Count(),
 				TotalViews = _db.Posts.Select(v => v.PostViews).Sum(),
 				TotalSubscribers = _db.Subscribers.Count(),
 				LatestPostViews = GetLatestPostViews(),

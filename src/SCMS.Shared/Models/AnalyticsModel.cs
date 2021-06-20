@@ -4,6 +4,7 @@ namespace SCMS.Shared
 	{
 		public int TotalPosts { get; set; }
         public int TotalPages { get; set; }
+        public int TotalServices { get; set; }
 		public int TotalViews { get; set; }
 		public int TotalSubscribers { get; set; }
 

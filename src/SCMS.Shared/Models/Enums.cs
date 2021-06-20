@@ -22,7 +22,7 @@ namespace SCMS.Shared
 
     public enum PostType
     {
-        Post = 1, Page = 2
+        Post = 1, Page = 2, Service = 3
     }
 
     public enum SaveStatus
